@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
 
+    TextView number1,number2;
 
     Button add;
     Button sub;
@@ -30,6 +31,80 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+
+        number1 = (TextView)findViewById(R.id.getnum1);
+        number2 = (TextView)findViewById(R.id.getnum2);
+
+        number1.setText(getIntent().getStringExtra("NAME1"));
+        number2.setText(getIntent().getStringExtra("NAME2"));
+
+
+
+        result =(TextView)findViewById(R.id.displayans);
+
+        num1 = (EditText)findViewById(R.id.getnum1);
+        num2 = (EditText)findViewById(R.id.getnum2);
+
+        add = (Button)findViewById(R.id.btnadd);
+        sub = (Button)findViewById(R.id.btnsub);
+        mul = (Button)findViewById(R.id.btnmul);
+        div = (Button)findViewById(R.id.btndiv);
+
+
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                numb1 = Integer.parseInt(num1.getText().toString());
+                numb2 = Integer.parseInt(num2.getText().toString());
+
+                finalres = numb1 + numb2;
+                result.setText(String.valueOf(finalres));
+            }
+        });
+
+
+
+        sub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                numb1 = Integer.parseInt(num1.getText().toString());
+                numb2 = Integer.parseInt(num2.getText().toString());
+
+                finalres = numb1 - numb2;
+                result.setText(String.valueOf(finalres));
+            }
+        });
+
+
+
+        mul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                numb1 = Integer.parseInt(num1.getText().toString());
+                numb2 = Integer.parseInt(num2.getText().toString());
+
+                finalres = numb1 * numb2;
+                result.setText(String.valueOf(finalres));
+            }
+        });
+
+
+
+        div.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                numb1 = Integer.parseInt(num1.getText().toString());
+                numb2 = Integer.parseInt(num2.getText().toString());
+
+                finalres = numb1 / numb2;
+                result.setText(String.valueOf(finalres));
+            }
+        });
 
 
 
