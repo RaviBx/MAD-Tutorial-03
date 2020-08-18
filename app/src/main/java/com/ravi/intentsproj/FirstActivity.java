@@ -50,6 +50,7 @@ public class FirstActivity extends AppCompatActivity {
 
                 startActivity(intentok);
 
+                //implementing toast
                 Context context = getApplicationContext();
                 CharSequence toastmsg = "You just clicked the OK Button";
 

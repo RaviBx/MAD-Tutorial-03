@@ -32,6 +32,8 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
 
+        //getting values from activity 1
+
         number1 = (TextView)findViewById(R.id.getnum1);
         number2 = (TextView)findViewById(R.id.getnum2);
 
@@ -39,11 +41,16 @@ public class SecondActivity extends AppCompatActivity {
         number2.setText(getIntent().getStringExtra("NAME2"));
 
 
-
+        //displaying final answer after calculating
         result =(TextView)findViewById(R.id.displayans);
 
+
+        //getting activity 1 values to calculate
         num1 = (EditText)findViewById(R.id.getnum1);
         num2 = (EditText)findViewById(R.id.getnum2);
+
+
+        //implementing operating buttons
 
         add = (Button)findViewById(R.id.btnadd);
         sub = (Button)findViewById(R.id.btnsub);
@@ -51,6 +58,8 @@ public class SecondActivity extends AppCompatActivity {
         div = (Button)findViewById(R.id.btndiv);
 
 
+
+        //implementing methods
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
