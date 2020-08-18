@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -15,7 +14,7 @@ public class FirstActivity extends AppCompatActivity {
 
     Button btnok;
     String notifi;
-    String sendString;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +37,6 @@ public class FirstActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intentok = new Intent(FirstActivity.this, SecondActivity.class);
-                intentok.putExtra("FirstActivity", sendString);
-
                 startActivity(intentok);
 
                 Context context = getApplicationContext();
